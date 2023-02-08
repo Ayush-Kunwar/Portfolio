@@ -50,7 +50,7 @@ function generatePlane() {
 
   const colors = []
   for (let i = 0; i < planeMesh.geometry.attributes.position.count; i++) {
-    colors.push(0, 0.19, 0.4)
+    colors.push(1, 0.19, 0.2)
   }
 
   planeMesh.geometry.setAttribute(
@@ -149,15 +149,15 @@ function animate() {
     intersects[0].object.geometry.attributes.color.needsUpdate = true
 
     const initialColor = {
-      r: 0,
+      r: 1,
       g: 0.19,
-      b: 0.4
+      b: 0.2
     }
 
     const hoverColor = {
-      r: 0.1,
-      g: 0.5,
-      b: 1
+      r: 0.4,
+      g: 0,
+      b: 0.3
     }
 
     gsap.to(hoverColor, {
